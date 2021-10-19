@@ -11,7 +11,7 @@ getArticles = (async () => {
     ignoreHTTPSErrors: true,
   });
   const page = await browser.newPage();
-  await page.setDefaultNavigationTimeout(120000);
+  await page.setDefaultNavigationTimeout(30000);
 
   await page.goto('https://getpocket.com/login', {
     waitUntil: 'networkidle0',
