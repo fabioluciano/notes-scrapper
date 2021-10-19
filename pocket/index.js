@@ -1,5 +1,7 @@
 const getArticles = require('./get-articles');
-let fs = require("path")
+let fs = require("fs")
+let path = require("path")
+
 let {
   render
 } = require("mustache")
@@ -11,6 +13,6 @@ getArticles.then(function (articles) {
   articles.forEach(article => {
     let output = render(template, article)
 
-    fs.writeFileSync(`./notes/${article.slugified_title}.md`, output)
+    fs.writeFileSync(`./${article.slugified_title}.md`, output)
   })
 })
