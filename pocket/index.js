@@ -1,10 +1,11 @@
 const getArticles = require('./get-articles');
-let fs = require("fs")
+let fs = require("path")
 let {
   render
 } = require("mustache")
 
-let template = fs.readFileSync("./template.md").toString()
+const templatePath = path.join(__dirname, './template.md');
+const template = fs.readFileSync(templatePath).toString()
 
 getArticles.then(function (articles) {
   articles.forEach(article => {
