@@ -13,6 +13,6 @@ getArticles.then(function (articles) {
   articles.forEach(article => {
     let output = render(template, article)
 
-    fs.writeFileSync(`./${article.slugified_title}.md`, output)
+    fs.writeFileSync(`../Imported Notes/Pocket/${article.slugified_title}.md`, output)
   })
 })
