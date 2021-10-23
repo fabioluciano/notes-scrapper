@@ -17,11 +17,8 @@ getArticles = (async () => {
     waitUntil: 'networkidle2',
   });
 
-  await page.waitForSelector('#field-1')
   await page.type('#field-1', GETPOCKET_USERNAME)
-  await page.waitForSelector('#field-2')
   await page.type('#field-2', GETPOCKET_PASSWORD)
-  await page.waitForSelector('.login-btn-email')
   await page.click('.login-btn-email')
   await page.waitForNavigation()
 
