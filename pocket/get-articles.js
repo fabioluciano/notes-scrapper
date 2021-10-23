@@ -14,7 +14,8 @@ getArticles = (async () => {
   await page.setDefaultNavigationTimeout(30000);
 
   await page.goto('https://getpocket.com/login', {
-    waitUntil: 'networkidle0',
+    networkIdleTimeout: 5000,
+    waitUntil: 'networkidle',
   });
 
   await page.waitForSelector('#field-1')
