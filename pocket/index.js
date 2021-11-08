@@ -1,18 +1,5 @@
-const getArticles = require('./get-articles');
-let fs = require("fs")
-let path = require("path")
+getArticles = (async () => {
+  return await require("./get-article-highlights");
+})();
 
-let {
-  render
-} = require("mustache")
-
-const templatePath = path.join(__dirname, './template.md');
-const template = fs.readFileSync(templatePath).toString()
-
-getArticles.then(function (articles) {
-  articles.forEach(article => {
-    let output = render(template, article)
-
-    fs.writeFileSync(`../Imported Notes/Pocket/${article.slugified_title}.md`, output)
-  })
-})
+module.exports = getArticles;

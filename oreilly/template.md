@@ -1,10 +1,6 @@
 ---
 aliases:
   - {{title}}
-tags: 
-{{#tags}}
- - {{.}}
-{{/tags}}
 ---
 
 # {{ title }}
