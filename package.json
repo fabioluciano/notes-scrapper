@@ -13,7 +13,6 @@
     "csv-parser": "^3.0.0",
     "dotenv": "^10.0.0",
     "mustache": "^4.2.0",
-    "neat-csv": "^7.0.0",
     "puppeteer": "^10.4.0",
     "slugify": "^1.6.1",
     "winston": "^3.3.3"
