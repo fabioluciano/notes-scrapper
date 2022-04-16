@@ -1,5 +1,6 @@
 const puppeteer = require("puppeteer");
 var slugify = require("slugify");
+
 require("dotenv").config();
 
 const GETPOCKET_USERNAME = process.env.GETPOCKET_USERNAME;
